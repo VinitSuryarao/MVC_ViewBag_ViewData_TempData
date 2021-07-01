@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+    <div> 
+         @*View Bag*@ 
+       <h1> Company Name :- @ViewBag.CompanyName </h1>
+       <ul>
+           @foreach (var item in ViewBag.EmpList)
+           {
+               <li> Employee Name :- @item </li>
+           }
+       </ul>
+    </div>
+    <div>
+        @*View Data*@
+        <h1> City Name :- @ViewData["CityName"] </h1>
+        <ul>
+            @foreach (var item in (List<string>)ViewData["CityList"])
+            {
+                <li> City Name :- @item </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
